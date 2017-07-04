@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:id="@+id/label"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/selectable_label_color"
+                 android:textSize="@dimen/label_text_size"
+                 android:paddingLeft="8dp"
+                 android:paddingRight="8dp"
+                 android:paddingBottom="4dp"
+                 android:paddingTop="4dp"
+                 android:textAlignment="center"
+                 android:background="@drawable/label_selectable_bg"
+                 android:layout_margin="4dp"
+                 android:fontFamily="sans-serif"/>

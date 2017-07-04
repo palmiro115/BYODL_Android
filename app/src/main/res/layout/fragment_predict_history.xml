@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/dialog_bg"
+              android:orientation="vertical"
+              tools:context="com.byodl.activities.home.fragments.PredictHistoryFragment">
+
+    <ImageButton
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="6dp"
+        app:srcCompat="@drawable/ic_close_white_36dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/predicts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/dlg_padding_h"
+        android:paddingRight="@dimen/dlg_padding_h"
+        android:paddingStart="@dimen/dlg_padding_h"
+        android:paddingEnd="@dimen/dlg_padding_h"
+        android:paddingBottom="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingEnd="@dimen/dlg_padding_h"
+        android:paddingLeft="@dimen/dlg_padding_h"
+        android:paddingRight="@dimen/dlg_padding_h"
+        android:paddingStart="@dimen/dlg_padding_h">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/buttonDelete"
+                style="@style/ButtonWhite"
+                android:layout_width="@dimen/buttons_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/delete"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/buttonCancel"
+                style="@style/ButtonTransparent"
+                android:layout_width="@dimen/buttons_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/cancel"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

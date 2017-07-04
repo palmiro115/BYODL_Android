@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_title_text_size">24sp</dimen>
+    <dimen name="menu_button_size">48dp</dimen>
+    <dimen name="home_title_margin_h">16dp</dimen>
+    <dimen name="bottom_bar_height">96dp</dimen>
+    <dimen name="buttons_stroke_width">3dp</dimen>
+    <dimen name="take_photo_button_size">72dp</dimen>
+    <dimen name="preview_button_size">72dp</dimen>
+    <dimen name="preview_button_radius">3dp</dimen>
+    <dimen name="camera_control_button_size">48dp</dimen>
+    <dimen name="dialog_radius">16dp</dimen>
+    <dimen name="predict_result_image_size">144dp</dimen>
+    <dimen name="widget_margin_h">8dp</dimen>
+    <dimen name="dlg_padding_h">16dp</dimen>
+    <dimen name="label_text_size">16sp</dimen>
+    <dimen name="label_radius">16dp</dimen>
+    <dimen name="labels_margin">4dp</dimen>
+    <dimen name="buttons_width">128dp</dimen>
+    <dimen name="button_radius">4dp</dimen>
+    <dimen name="update_button_size">200dp</dimen>
+    <dimen name="history_text_size">16sp</dimen>
+    <dimen name="history_items_padding_h">8dp</dimen>
+    <dimen name="progress_padding_h">16dp</dimen>
+    <dimen name="progress_padding_v">8dp</dimen>
+    <dimen name="updating_label_text_size">20sp</dimen>
+    <dimen name="progress_bar_height">16dp</dimen>
+    <item name="dialog_width_percent" format="float" type="dimen">0.9</item>
+    <item name="progress_dialog_width_percent" format="float" type="dimen">0.8</item>
+</resources>

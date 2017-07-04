@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'org.greenrobot.greendao'
+
+def keystorePropertiesFile = rootProject.file("keystore.properties");
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['alias']
+            keyPassword keystoreProperties['keyByodl']
+            storeFile file('../keystore/keystore.jks')
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.byodl"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 7
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            ext.enableCrashlytics = false
+        }
+    }
+    aaptOptions {
+        noCompress 'pb'
+    }
+    productFlavors {
+        byodl {
+            applicationId "com.byodl"
+            signingConfig signingConfigs.release
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def project = "App"
+            def SEP = "_"
+            def flavor = variant.productFlavors[0].name
+            def buildType = variant.variantData.variantConfiguration.buildType.name
+
+            def newApkName = project + SEP + flavor + SEP + buildType + ".apk"
+
+            output.outputFile = new File(output.outputFile.parent, newApkName)
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'com.github.google:cameraview:9bbe07ba4'
+    compile 'com.karumi:dexter:4.0.0'
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.7.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.7.0'
+}

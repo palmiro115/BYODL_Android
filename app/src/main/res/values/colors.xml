@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">@android:color/white</color>
+    <color name="colorPrimary">#1acc87</color>
+    <color name="colorPrimaryDark">#2f6d55</color>
+    <color name="colorAccent">@color/white</color>
+    <color name="camera_back">@android:color/black</color>
+    <color name="bottom_panel_background">#99000000</color>
+    <color name="colorPrimaryLight">#9afad5</color>
+    <color name="disabled">#d0d0d0</color>
+    <color name="semi_transparent_white">#99ffffff</color>
+    <color name="bg_white_button_pressed">@color/colorPrimary</color>
+    <color name="dark_gray">#4f4f4f</color>
+    <color name="semi_transparent_green">#661acc87</color>
+    <color name="checked_bg">#33000000</color>
+    <color name="tab_selected">@color/white</color>
+    <color name="tab_unselected">#99ffffff</color>
+    <color name="progress_background">#16b477</color>
+
+</resources>
